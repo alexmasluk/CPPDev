@@ -1,0 +1,7 @@
+#include "Stack.h"
+
+template <typename E> ArrayStack<E>::ArrayStack(int cap) : S(new E[cap]), capacity(cap), t(-1) { }
+
+template <typename E> int ArrayStack<E>::size() const
+{
+	return 
