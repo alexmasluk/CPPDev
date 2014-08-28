@@ -1,0 +1,39 @@
+#include <iomanip>
+#include <iostream>
+
+using namespace std;
+
+const float COKE_PRICE = 2.10;
+const float BURGER_PRICE = 1.85;
+const int MENU_LEFT_WIDTH = 16;
+const int MENU_RIGHT_WIDTH = 5;
+
+int main()
+{
+	int amtCokes, amtBurgers;
+
+	//display menu
+	cout << setfill('.');
+	cout << "---------------------Menu-----------------------\n";
+	cout << left << setwidth(MENU_LEFT_WIDTH) << "Coke"
+		  << right << setwidth(MENU_RIGHT_WIDTH) << COKE_PRICE;
+	cout << endl;
+
+	cout << left << setwidth(MENU_LEFT_WIDTH) << "Hamburger"
+		  << right << setwidth(MENU_RIGHT_WIDTH) << BURGER_PRICE;
+
+	//take order
+	cout << "\tHow many cokes? ";
+	cin >> amtCokes;
+	cout << "\tHow many hamburgers? ";
+	cin >> amtBurgers;
+
+	//calculate and display bill
+	float bill = amtCokes*COKE_PRICE + amtBurgers*BURGER_PRICE;
+	cout << fixedpoint << setprecision(2) 
+		  << "\t\tYour total bill: " << bill << "\n";
+
+	system("pause");
+	return 0;
+}
+

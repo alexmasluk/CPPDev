@@ -1,0 +1,29 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string yourName, friendName;
+	char gender;
+
+	cout << "Enter your full name: " ;
+	yourName = cin.get();
+	cin.get();  //clear newline char from buffer
+
+	cout << yourName << ", please enter your gender (m/f)? ";
+	cin >> gender;
+
+	cout << "Mr. " << yourName << ", please enter your friend's name: ";
+	friendName = cin.get();
+	cin.get(); 
+
+	cout << "Hello Mr/Mrs " << friendName << ", " << yourName
+		  << " considered you as a friend!!\n";
+	
+	system("pause");
+	return 0;
+
+}

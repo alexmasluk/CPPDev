@@ -1,0 +1,34 @@
+//------------------------------------------------------------------------
+//			
+//
+//
+//
+//------------------------------------------------------------------------
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+using namespace std;
+
+
+const double E = 2.71828182845904523536
+int main()
+{
+	float initDeposit, interestRate;
+	int years;
+
+	//get data from user
+	cout << "\tEnter the money you want to deposit now(P): ";
+	cin >> initDeposit;
+	cout << "\tEnter the interest rate: ";
+	cin >> interestRate;
+	cout << "\tEnter the duration in years(t): ";
+	cin >> years;
+
+	//calculate and display final balance
+	float finalAmount = initialDeposit*pow(E, interestRate*years);
+	cout << fixed << setprecision(2);
+	cout << "\t\tYour balance after 5 years is " << finalAmount;
+	
+	system("pause");
+	return 0;
+}

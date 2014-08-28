@@ -1,0 +1,42 @@
+//----------------------------------------------------------------------------
+//
+//
+//
+//
+//
+//----------------------------------------------------------------------------
+#include <iostream>
+#include <iomanip>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	string yourName, friendName;
+	char gender;
+
+	cout << "Enter your full name: " ;
+	getline(cin, yourName);
+
+	cout << yourName << ", please enter your gender (m/f)? ";
+	cin >> gender;
+	cin.get();  //clear newline char from buffer
+
+	cout << "Mr. " << yourName << ", please enter your friend's name: ";
+	getline(cin, friendName);
+
+	cout << "Hello Mr/Mrs " << friendName << ", " << yourName
+		  << " considered you as a friend!!\n";
+	
+	system("pause");
+	return 0;
+
+}	
+/*									OUTPUT									*\
+Enter your full name: Barack H Obama
+Barack H Obama, please enter your gender (m/f)? m
+Mr. Barack H Obama, please enter your friend's name: Bill Clinton
+Hello Mr/Mrs Bill Clinton, Barack H Obama considered you as a friend!!
+Press any key to continue . . .
+*/
