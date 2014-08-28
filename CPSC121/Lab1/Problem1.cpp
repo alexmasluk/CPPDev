@@ -1,12 +1,13 @@
 //-----------------------------------------------------------------------
-//
-//
-//
-//
-//
+//			Name: Alex Masluk
+//			Proj: Lab 1, Problem 1 
+//			Due: Sept 2, 2014
+//			Course: CPSC 121
+//			
 //
 //-----------------------------------------------------------------------
 
+// This program calculates a bank account balance based on the formula A = Pe^(rt)
 #include <iostream>
 #include <iomanip>
 #include <cmath>
