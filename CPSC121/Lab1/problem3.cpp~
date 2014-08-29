@@ -1,3 +1,11 @@
+//-----------------------------------------------------------------------
+//				Name: Alex Masluk
+//				Proj: Lab 1 Problem 1
+//				Due: Sep 2, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Display formatted menu; take order; calc bill
+//-----------------------------------------------------------------------
 #include <iomanip>
 #include <iostream>
 
@@ -5,7 +13,7 @@ using namespace std;
 
 const float COKE_PRICE = 2.10;
 const float BURGER_PRICE = 1.85;
-const int MENU_LEFT_WIDTH = 16;
+const int MENU_LEFT_WIDTH = 19;
 const int MENU_RIGHT_WIDTH = 5;
 
 int main()
@@ -14,13 +22,14 @@ int main()
 
 	//display menu
 	cout << setfill('.');
-	cout << "---------------------Menu-----------------------\n";
-	cout << left << setwidth(MENU_LEFT_WIDTH) << "Coke"
-		  << right << setwidth(MENU_RIGHT_WIDTH) << COKE_PRICE;
+	cout << "----------Menu----------\n";
+	cout << left << setw(MENU_LEFT_WIDTH) << "Coke"
+		  << right << setw(MENU_RIGHT_WIDTH) << COKE_PRICE;
 	cout << endl;
 
-	cout << left << setwidth(MENU_LEFT_WIDTH) << "Hamburger"
-		  << right << setwidth(MENU_RIGHT_WIDTH) << BURGER_PRICE;
+	cout << left << setw(MENU_LEFT_WIDTH) << "Hamburger"
+		  << right << setw(MENU_RIGHT_WIDTH) << BURGER_PRICE;
+	cout << endl;
 
 	//take order
 	cout << "\tHow many cokes? ";
@@ -30,10 +39,18 @@ int main()
 
 	//calculate and display bill
 	float bill = amtCokes*COKE_PRICE + amtBurgers*BURGER_PRICE;
-	cout << fixedpoint << setprecision(2) 
+	cout << fixed << setprecision(2) 
 		  << "\t\tYour total bill: " << bill << "\n";
 
 	system("pause");
 	return 0;
 }
-
+/*								OUTPUT								*\
+----------Menu----------	
+Coke.................2.1
+Hamburger...........1.85
+        How many cokes? 3
+        How many hamburgers? 2
+                Your total bill: 10.00
+Press any key to continue . . .
+*/

@@ -1,3 +1,11 @@
+//-----------------------------------------------------------------------
+//				Name: Alex Masluk
+//				Proj: Lab 1 Problem 4
+//				Due: Sep 2, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Calculate triangle area and perimeter 
+//-----------------------------------------------------------------------
 #include <iostream>
 #include <cmath>
 #include <iomanip>

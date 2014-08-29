@@ -1,18 +1,16 @@
 //-----------------------------------------------------------------------
-//
-//
-//
-//
-//
-//
+//				Name: Alex Masluk
+//				Proj: Lab 1 Problem 1
+//				Due: Sep 2, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Calculate interest based on A=Pe^(rt)
 //-----------------------------------------------------------------------
 
 #include <iostream>
 #include <iomanip>
 #include <cmath>
 using namespace std;
-
-const double E = 2.71828182845904523536;
 
 int main()
 {
@@ -30,7 +28,7 @@ int main()
 	cin >> years;
 	 
 	//calculate and display final balance
-	finalAmount = initDeposit * pow(E, interestRate*years);
+	finalAmount = initDeposit * exp(interestRate*finalAmount); 
 	cout << fixed << setprecision(2);
 	cout << "\t\tYour balance after 5 years is " << finalAmount << "\n";
 	

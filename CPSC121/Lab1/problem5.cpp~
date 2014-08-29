@@ -1,0 +1,33 @@
+//-----------------------------------------------------------------------
+//				Name: Alex Masluk
+//				Proj: Lab 1 Problem 5
+//				Due: Sep 2, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Compute and display value of 2 formulas 
+//-----------------------------------------------------------------------
+#include <cmath>
+#include <iomanip>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	//declarations
+	float a, b;
+	
+	//user input
+	cout << "\tEnter the value of a and b: ";
+	cin >> a >> b;
+	cout << endl;
+
+	//display calculations
+	cout << "(a+b)^a = " << pow((a+b), a) << endl;
+	cout << "The 4th root of (a^2 + b^5) = " 
+		  << pow((pow(a, float(2))+pow(b, float(5))), 1./4) <<endl;
+	
+	system("pause");
+	return 0;
+}
+	
+	

@@ -1,3 +1,11 @@
+//-----------------------------------------------------------------------
+//				Name: Alex Masluk
+//				Proj: Lab 1 Problem 3
+//				Due: Sep 2, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Display formatted menu; take order; calc bill
+//-----------------------------------------------------------------------
 #include <iomanip>
 #include <iostream>
 
