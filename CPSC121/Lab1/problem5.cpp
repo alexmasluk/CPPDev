@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------
-//				Name: Alex Masluk
-//				Proj: Lab 1 Problem 5
-//				Due: Sep 2, 2014
-//				Class: CPSC 121
-//				Prof: Mr. Ahmadnia
-//				Description: Compute and display value of 3 formulas 
+//	Name: Alex Masluk
+//	Proj: Lab 1 Problem 5
+//	Due: Sep 2, 2014
+//	Class: CPSC 121
+//	Prof: Mr. Ahmadnia
+//	Description: Compute and display value of 3 formulas 
 //-----------------------------------------------------------------------
 #include <cmath>
 #include <iomanip>
@@ -32,12 +32,12 @@ int main()
 	system("pause");
 	return 0;
 }
-/*					Output				    *\
+/*---------------------Output----------------------
         Enter the value of a and b: 2.3 4.7
 
         (a+b)^a = 87.85
         The 4th root of (a^2 + b^5) = 6.92
         Ln(a + b) + Log(2ab) = 3.28
 Press any key to continue . . .
-*/
+-------------------------------------------------*/
 
