@@ -25,7 +25,9 @@ int main()
 	cout << fixed << setprecision(2);
 	cout << "\t(a+b)^a = " << pow(float(a+b), float(a)) << endl;
 	cout << "\tThe 4th root of (a^2 + b^5) = " 
-		  << pow((pow(float(a), float(2))+pow(float(b), float(5))), float(1./4)) <<endl;
+		  << pow((pow(float(a), float(2))+pow(float(b), float(5))), float(1./4)) 
+		  <<endl;
+	cout << "\tLn(a + b) + Log(2ab) = " << log(a+b)+log10(2*a*b) <<endl;
 	
 	system("pause");
 	return 0;
@@ -35,5 +37,7 @@ int main()
 
         (a+b)^a = 87.85
         The 4th root of (a^2 + b^5) = 6.92
+        Ln(a + b) + Log(2ab) = 3.28
 Press any key to continue . . .
 */
+
