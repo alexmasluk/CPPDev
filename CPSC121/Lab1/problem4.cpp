@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------
-//				Name: Alex Masluk
-//				Proj: Lab 1 Problem 4
-//				Due: Sep 2, 2014
-//				Class: CPSC 121
-//				Prof: Mr. Ahmadnia
-//				Description: Calculate triangle area and perimeter 
+//	Name: Alex Masluk
+//	Proj: Lab 1 Problem 4
+//	Due: Sep 2, 2014
+//	Class: CPSC 121
+//	Prof: Mr. Ahmadnia
+//	Description: Calculate triangle area and perimeter 
 //-----------------------------------------------------------------------
 #include <iostream>
 #include <cmath>
@@ -44,7 +44,7 @@ int main()
 	            
 }
 
-/*						     	  Output									*\
+/*------------------------------Output-----------------------------------
 Enter the measure for all three sides of a triangle: 33.185 21.234 13.80
 For the following triangle
                     /\
@@ -56,5 +56,5 @@ For the following triangle
         Area = 90.81
         Perimeter = 68.22
 Press any key to continue . . .
-*/
+------------------------------------------------------------------------*/
 
