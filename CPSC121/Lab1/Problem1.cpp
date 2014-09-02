@@ -29,7 +29,7 @@ int main()
 	 
 	//calculate and display final balance
 	finalAmount = initDeposit * exp(interestRate*finalAmount); 
-	cout << fixed << setprecision(2);
+	cout << fixed << showpoint << setprecision(2);
 	cout << "\t\tYour balance after 5 years is " << finalAmount << "\n";
 	
 	system("pause");
