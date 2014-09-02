@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------
-//				Name: Alex Masluk
-//				Proj: Lab 1 Problem 3
-//				Due: Sep 2, 2014
-//				Class: CPSC 121
-//				Prof: Mr. Ahmadnia
-//				Description: Display formatted menu; take order; calc bill
+//	Name: Alex Masluk
+//	Proj: Lab 1 Problem 3
+//	Due: Sep 2, 2014
+//	Class: CPSC 121
+//	Prof: Mr. Ahmadnia
+//	Description: Display formatted menu; take order; calc bill
 //-----------------------------------------------------------------------
 #include <iomanip>
 #include <iostream>
@@ -45,7 +45,7 @@ int main()
 	system("pause");
 	return 0;
 }
-/*								OUTPUT								*\
+/*----------------------------OUTPUT------------------------------
 ----------Menu----------	
 Coke.................2.1
 Hamburger...........1.85
@@ -53,4 +53,4 @@ Hamburger...........1.85
         How many hamburgers? 2
                 Your total bill: 10.00
 Press any key to continue . . .
-*/
+----------------------------------------------------------------*/
