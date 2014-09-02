@@ -22,7 +22,7 @@ int main()
 	cout << endl;
 
 	//display calculations
-	cout << fixed << setprecision(2);
+	cout << fixed << showopint << setprecision(2);
 	cout << "\t(a+b)^a = " << pow(float(a+b), float(a)) << endl;
 	cout << "\tThe 4th root of (a^2 + b^5) = " 
 		  << pow((pow(float(a), float(2))+pow(float(b), float(5))), float(1./4)) 
