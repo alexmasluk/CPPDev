@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------
-//				Name: Alex Masluk
-//				Proj: Lab 1 Problem 2
-//				Due: Sep 2, 2014
-//				Class: CPSC 121
-//				Prof: Mr. Ahmadnia
-//				Description: Take user input of two full names and one gender 
+//	Name: Alex Masluk
+//	Proj: Lab 1 Problem 2
+//	Due: Sep 2, 2014
+//	Class: CPSC 121
+//	Prof: Mr. Ahmadnia
+//	Description: Take user input of two full names and one gender 
 //-----------------------------------------------------------------------
 #include <iostream>
 #include <iomanip>
@@ -34,10 +34,10 @@ int main()
 	return 0;
 
 }	
-/*									OUTPUT									*\
+/*---------------------------------OUTPUT----------------------------------
 Enter your full name: Barack H Obama
 Barack H Obama, please enter your gender (m/f)? m
 Mr. Barack H Obama, please enter your friend's name: Bill Clinton
 Hello Mr/Mrs Bill Clinton, Barack H Obama considered you as a friend!!
 Press any key to continue . . .
-*/
+--------------------------------------------------------------------------*/
