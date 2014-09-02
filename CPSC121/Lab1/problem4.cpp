@@ -22,7 +22,7 @@ int main()
 	cin >> sideA >> sideB >> sideC;
 
 	//display triangle
-	cout << fixed << setprecision(2);
+	cout << fixed << showpoint << setprecision(2);
 	cout << "For the following triangle\n";
 	cout <<           "\t            /\\\n";
 	cout <<           "\t           /  \\\n";
