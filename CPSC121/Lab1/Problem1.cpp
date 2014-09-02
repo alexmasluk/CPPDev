@@ -35,11 +35,11 @@ int main()
 	system("pause");
 	return 0;
 }
-/*							OUTPUT						      *\
+/*---------------------------------------------OUTPUT---------------------------------------------------
 
         Enter the money you want to deposit now(P): 20000
         Enter the interest rate: .05
         Enter the duration in years(t): 5
                 Your balance after 5 years is 25680.51
 Press any key to continue . . .
-*/
+-------------------------------------------------------------------------------------------------------*/
