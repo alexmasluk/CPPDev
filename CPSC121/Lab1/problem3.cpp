@@ -39,7 +39,7 @@ int main()
 
 	//calculate and display bill
 	float bill = amtCokes*COKE_PRICE + amtBurgers*BURGER_PRICE;
-	cout << fixed << setprecision(2) 
+	cout << fixed << showpoint << setprecision(2) 
 		  << "\t\tYour total bill: " << bill << "\n";
 
 	system("pause");
