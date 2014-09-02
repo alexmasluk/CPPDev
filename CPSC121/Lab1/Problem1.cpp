@@ -1,10 +1,10 @@
 //-----------------------------------------------------------------------
-//				Name: Alex Masluk
-//				Proj: Lab 1 Problem 1
-//				Due: Sep 2, 2014
-//				Class: CPSC 121
-//				Prof: Mr. Ahmadnia
-//				Description: Calculate interest based on A=Pe^(rt)
+//		Name: Alex Masluk
+//		Proj: Lab 1 Problem 1
+//		Due: Sep 2, 2014
+//		Class: CPSC 121
+//		Prof: Mr. Ahmadnia
+//		Description: Calculate interest based on A=Pe^(rt)
 //-----------------------------------------------------------------------
 
 #include <iostream>
@@ -35,11 +35,11 @@ int main()
 	system("pause");
 	return 0;
 }
-/*---------------------------------------------OUTPUT---------------------------------------------------
+/*------------------------------OUTPUT------------------------------------
 
         Enter the money you want to deposit now(P): 20000
         Enter the interest rate: .05
         Enter the duration in years(t): 5
                 Your balance after 5 years is 25680.51
 Press any key to continue . . .
--------------------------------------------------------------------------------------------------------*/
+-------------------------------------------------------------------------*/
