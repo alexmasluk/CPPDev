@@ -4,7 +4,7 @@
 //				Due: Sep 2, 2014
 //				Class: CPSC 121
 //				Prof: Mr. Ahmadnia
-//				Description: Compute and display value of 2 formulas 
+//				Description: Compute and display value of 3 formulas 
 //-----------------------------------------------------------------------
 #include <cmath>
 #include <iomanip>
