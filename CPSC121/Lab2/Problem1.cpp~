@@ -1,0 +1,102 @@
+//-----------------------------------------------------------------------
+//				Name: Alex Masluk
+//				Proj: Lab 2 Problem 4
+//				Due: Sep 11, 2014
+//				Class: CPSC 121
+//				Prof: Mr. Ahmadnia
+//				Description: Input date, convert it from numbers to words
+//-----------------------------------------------------------------------
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	//declarations;
+	int month, day, year;
+	int lastDigit;
+	string daySuffix;
+	string monthText;
+	
+	//get input
+	cout << "\tEnter today's date: ";
+	cin >> month;
+	cin.ignore();
+	cin >> day;
+	cin.ignore();
+	cin >> year;
+
+	//determine day suffix
+	int lastDigit = day%10;
+	if (day==11)
+		daySuffix = "th";
+	else
+		switch (lastDigit)
+		{
+			case 1:
+				daySuffix = "st";
+				break;
+			case 2:
+				daySuffix = "nd";
+				break;
+			case 3:
+				daySuffix = "rd";
+				break;
+			default:
+				daySuffix = "th";
+		}
+
+	//determine month text
+	switch (month)
+	{
+		case 1:
+			monthText = "Jan";
+			break;
+		case 2:
+			monthText = "Feb";
+			break;
+		case 3:
+			monthText = "Mar";
+			break;
+		case 4:
+			monthText = "Apr";
+			break;
+		case 5:
+			monthText = "May";
+			break;
+		case 6:
+			monthText = "June";
+			break;
+		case 7:
+			monthText = "July";
+			break;
+		case 8:
+			monthText = "Aug";
+			break;
+		case 9:
+			monthText = "Sept";
+			break;
+		case 10:
+			monthText = "Oct";
+			break;
+		case 11:
+			monthText = "Nov";
+			break;
+		default:
+			monthText = "Dec";
+	}
+
+	cout << "\t\tToday is " << monthText << day << daySuffix
+		  << ", " << year << endl;
+	
+	
+	system("pause");
+	return 0;
+}
+
+/*---------------------------OUTPUT----------------------------
+        Enter today's date: 9/4/2014
+                Today is Sept 4th, 2014
+Press any key to continue . . .
+--------------------------------------------------------------*/ 
