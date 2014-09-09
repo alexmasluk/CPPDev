@@ -1,11 +1,16 @@
-//-----------------------------------------------------------------------
-//		Name: Alex Masluk
-//		Proj: Lab 2 Problem 3
-//		Due: Sep 11, 2014
-//		Class: CPSC 121
-//		Prof: Mr. Ahmadnia
-//		Description: Display menu, take order and calculate bill
-//----------------------------------------------------------------------
+//=========================================================================
+// File: problem3.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/11/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 2, Problem No. 3
+// Description: 
+// 	Display a menu, take user order, calculate and display bill.
+//
+//=========================================================================
 
 #include <iostream>
 #include <iomanip>
@@ -18,6 +23,11 @@ const float SMALL_DRINK_PRICE = 1.20,
 	    LARGE_DRINK_PRICE = 1.70,
 	    SMALL_SANDWICH_PRICE = 3.75,
 	    LARGE_SANDWICH_PRICE = 4.00; 
+	   
+//====== main =============================================================
+//
+//=========================================================================
+
 int main()
 {
 	//timestamp
@@ -90,7 +100,7 @@ int main()
 	system("pause");
 	return 0;
 }
-/*-------------------OUTPUT--------------------------
+/*=============================== OUTPUT ====================================
 Today's date and time is: Tue Sep 09 17:35:34 2014
 
 
@@ -108,4 +118,4 @@ Sandwiches
           What size(12/10 inches)? 10
                 Total bill = 15.75
 Press any key to continue . . .
------------------------------------------------------*/
+============================================================================*/
