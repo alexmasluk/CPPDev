@@ -1,12 +1,16 @@
-//-----------------------------------------------------------------------
-//		Name: Alex Masluk
-//		Proj: Lab 2 Problem 1 
-//		Due: Sep 11, 2014
-//		Class: CPSC 121
-//		Prof: Mr. Ahmadnia
-//		Description: Compute healthclub membership fee based upon age and
-//				             age and gender.
-//-----------------------------------------------------------------------
+//=========================================================================
+// File: problem1.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/11/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 2, Problem No. 1
+// Description: 
+// 	Compute healthclub membership fee based upon age and gender.
+//
+//=========================================================================
 
 #include <iostream>
 #include <string>
@@ -24,6 +28,9 @@ const float M_CHILD_FEE = 50.00,
 				F_ADULT_FEE = 250.00;
 const float TAX = 0.1;
 
+//====== main =============================================================
+//
+//=========================================================================
 int main()
 {
 	//timestamp
@@ -124,7 +131,7 @@ int main()
 	return 0;
 }
 
-/*---------------------------OUTPUT----------------------------
+/*=============================== OUTPUT ====================================
 Today's date and time is: Fri Sep 05 15:24:55 2014
 
 ----------Fullerton Health Club-----------
@@ -142,5 +149,5 @@ Adults (Age > 19)
           Enter your full name: Barack H Obama
             Hello Mr. Barack H Obama, your membership fee is 302.50 (10% tax is included)
 Press any key to continue . . .
---------------------------------------------------------------*/ 
+============================================================================*/ 
 
