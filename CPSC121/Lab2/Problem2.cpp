@@ -8,8 +8,8 @@
 // Instructor: Dr. Ray Ahmadnia
 // Project: Project No. 2, Problem No. 2
 // Description: 
-// 	Display a menu, take user order, calculate and display bill
-//
+// 	Perform an arithmetic operation on two user-inputted fractions, and
+//	display the result.
 //=========================================================================
 
 #include <iostream>
