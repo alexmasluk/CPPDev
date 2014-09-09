@@ -1,11 +1,16 @@
-//-----------------------------------------------------------------------
-//	Name: Alex Masluk
-//	Proj: Lab 2 Problem 4
-//	Due: Sep 2, 2014
-//	Class: CPSC 121
-//	Prof: Mr. Ahmadnia
-//	Description: Convert date from digits to string
-//-----------------------------------------------------------------------
+//=========================================================================
+// File: problem4.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/11/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 2, Problem No. 4
+// Description: 
+// 	Input date in form MM/DD/YYYY, and convert it to a sentence
+//	
+//=========================================================================
 
 #include <iostream>
 #include <string>
