@@ -1,19 +1,40 @@
+//=========================================================================
+// File: problem5.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/11/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 2, Problem No. 5
+// Description: 
+// 	Input a number in digits, and convert it to words
+//	
+//=========================================================================
+
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
+
+//====== main =============================================================
+//
+//=========================================================================
 
 int main()
 {
+	//timestamp
+	time_t p;
+	time(&p);
+	cout << "Today's date and time is: " << ctime(&p) << endl << endl;
+
 
 	//input number
-	/*int num;
-	cout << "Enter a number <1000: ";
-	cin >> num;*/
 	int num;
-	for (int i=1; i<1000; i++)
-	{
-	//break into 3 parts
-		num=i;
+	cout << "Enter a number <1000: ";
+	cin >> num;
+
+	//extract each column as a single digit
 	int hundreds, tens, ones;
 	hundreds = num/100;
     num -= hundreds*100;
@@ -21,41 +42,45 @@ int main()
     num -= tens*10;
     ones = num;
 
-	string hundredsText, tensText, onesText;
+	string hundredsText, tensText, onesText, fullText;
 	switch (hundreds)
 	{
 		case 1:
-			hundredsText = "One ";
+			hundredsText = "One";
 			break;
 		case 2:
-			hundredsText = "Two ";
+			hundredsText = "Two";
 			break;
 		case 3:
-			hundredsText = "Three ";
+			hundredsText = "Three";
 			break;
 		case 4:
-			hundredsText = "Four ";
+			hundredsText = "Four";
 			break;
 		case 5:
-			hundredsText = "Five ";
+			hundredsText = "Five";
 			break;
 		case 6:
-			hundredsText = "Six ";
+			hundredsText = "Six";
 			break;
 		case 7:
-			hundredsText = "Seven ";
+			hundredsText = "Seven";
 			break;
 		case 8:
-			hundredsText = "Eight ";
+			hundredsText = "Eight";
 			break;
 		case 9:
-			hundredsText = "Nine ";
+			hundredsText = "Nine";
 			break;
 		default:
 			hundredsText = "";
 	}
-    hundredsText = (hundreds != 0)? hundredsText + "Hundred ": "";
 
+	//add the word 'hundred' if applicable
+    hundredsText = (hundreds != 0)? hundredsText + " Hundred": "";
+
+
+	//because we need the text for the ones column to create the teens, we examine the ones column next
 	switch (ones)
 	{
 		case 1:
@@ -92,61 +117,94 @@ int main()
 	switch (tens)
 	{
 	    case 0:
-            cout << hundredsText;
-			if (hundreds > 0 && ones>0) 
-				cout << " and ";
-			cout << onesText;
+            if (hundreds>0 && ones>0) 
+				tensText = "and";
             break;
         case 1:
             switch (ones)
             {
                 case 0:
-                    cout << hundredsText << "Ten";
+                    tensText = "Ten";
                     break;
                 case 1:
-                    cout << hundredsText << "Eleven";
+                    tensText = "Eleven";
                     break;
                 case 2:
-                    cout << hundredsText << "Twelve";
+                    tensText = "Twelve";
                     break;
 				case 3:
-					cout << hundredsText << "Thirteen";
+					tensText = "Thirteen";
 					break;
 				case 5:
-					cout << hundredsText << "Fifteen";
+					tensText = "Fifteen";
+					break;
+				case 8:
+					tensText = "Eighteen";
 					break;
                 default:
-                    cout << hundredsText << onesText << "teen";
+                    tensText = onesText+"teen";
             }
             break;
         case 2:
-            cout << hundredsText << " Twenty " << onesText;
+			tensText = "Twenty";
             break;
         case 3:
-            cout << hundredsText << " Thirty " << onesText;
+            tensText = "Thirty";
             break;
         case 4:
-            cout << hundredsText << " Forty " << onesText;
+            tensText = "Forty";
             break;
         case 5:
-            cout << hundredsText << " Fifty " << onesText;
+            tensText = "Fifty";
             break;
         case 6:
-            cout << hundredsText << " Sixty " << onesText;
+            tensText = "Sixty";
             break;
         case 7:
-            cout << hundredsText << " Seventy " << onesText;
+            tensText = "Seventy";
             break;
         case 8:
-            cout << hundredsText << " Eighty " << onesText;
+            tensText = "Eighty";
             break;
-        default:
-            cout << hundredsText << " Ninety " << onesText;
+        case 9:
+            tensText = "Ninety";
+			break;
 	}
-    cout << endl;
-	if (tens == 0)
-		system("pause");
-	} 
+
+
+	//build the full string, inserting spaces as necessary
+	fullText = hundredsText;
+
+	if (hundreds>0) 
+		fullText += " ";
+
+	fullText += tensText;
+	
+	if (tens!=1)
+	{
+		if (tens>0 || hundreds>0)
+			fullText+=" ";
+		fullText += onesText;
+	}
+
+	cout << "\tYou entered " << fullText << endl;
+
 	system("pause");
 	return 0;
 }
+/*========================================= OUTPUT ==============================================
+Today's date and time is: Tue Sep 09 16:32:35 2014
+
+
+Enter a number <1000: 405
+        You entered Four Hundred and Five
+Enter a number <1000: 77
+        You entered Seventy Seven
+Enter a number <1000: 129
+        You entered One Hundred Twenty Nine
+Enter a number <1000: 350
+        You entered Three Hundred Fifty
+Enter a number <1000: 911
+        You entered Nine Hundred Eleven
+Press any key to continue . . .
+=================================================================================================*/
