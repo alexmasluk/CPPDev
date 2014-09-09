@@ -1,17 +1,24 @@
-//-----------------------------------------------------------------------
-//		Name: Alex Masluk
-//		Proj: Lab 2 Problem 2
-//		Due: Sep 11, 2014
-//		Class: CPSC 121
-//		Prof: Mr. Ahmadnia
-//		Description: Perform an arithmetic operation on two fractions 
-//			          based on user input
-//----------------------------------------------------------------------
+//=========================================================================
+// File: problem2.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/11/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 2, Problem No. 2
+// Description: 
+// 	Display a menu, take user order, calculate and display bill
+//
+//=========================================================================
 
 #include <iostream>
 #include <iomanip>
 using namespace std;
 
+//====== main =============================================================
+//
+//=========================================================================
 int main()
 {
 	//timestamp
@@ -70,7 +77,7 @@ int main()
 
 }
 
-/*---------------OUTPUT-----------------------------
+/*=============================== OUTPUT ====================================
 Today's date and time is: Fri Sep 05 15:57:23 2014
 
 Enter a fraction: 12/5
@@ -78,4 +85,4 @@ Enter another fraction: 2.1/7.5
         Enter an operation symbol (+,-,*,/): *
                 (12.00/5.00) * (2.10/7.50) = 25.20/37.50
 Press any key to continue . . .
----------------------------------------------------*/
+============================================================================*/ 
