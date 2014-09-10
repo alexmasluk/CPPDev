@@ -26,6 +26,11 @@ const float TAX = 0.1;
 
 int main()
 {
+	//timestamp
+	time_t p;
+	time(&p);
+	cout << "Today's date and time is: " << ctime(&p) << endl << endl;
+
 	//declarations;
 	int age, ageGroup;
 	char gender;
@@ -120,6 +125,8 @@ int main()
 }
 
 /*---------------------------OUTPUT----------------------------
+Today's date and time is: Fri Sep 05 15:24:55 2014
+
 ----------Fullerton Health Club-----------
 Children (Age 1-12)
         Male......................50.00

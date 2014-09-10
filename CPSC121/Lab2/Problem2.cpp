@@ -1,6 +1,6 @@
 //-----------------------------------------------------------------------
 //		Name: Alex Masluk
-//		Proj: Lab 2 Problem 1 
+//		Proj: Lab 2 Problem 2
 //		Due: Sep 11, 2014
 //		Class: CPSC 121
 //		Prof: Mr. Ahmadnia
@@ -14,6 +14,10 @@ using namespace std;
 
 int main()
 {
+	//timestamp
+	time_t p;
+	time(&p);
+	cout << "Today's date and time is: " << ctime(&p) << endl << endl;
 
 	//declarations
 	float numer1, numer2, denom1, denom2, numerResult, denomResult;
@@ -67,6 +71,8 @@ int main()
 }
 
 /*---------------OUTPUT-----------------------------
+Today's date and time is: Fri Sep 05 15:57:23 2014
+
 Enter a fraction: 12/5
 Enter another fraction: 2.1/7.5
         Enter an operation symbol (+,-,*,/): *

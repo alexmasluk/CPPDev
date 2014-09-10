@@ -6,11 +6,14 @@ int main()
 {
 
 	//input number
-	int num;
+	/*int num;
 	cout << "Enter a number <1000: ";
-	cin >> num;
-
+	cin >> num;*/
+	int num;
+	for (int i=1; i<1000; i++)
+	{
 	//break into 3 parts
+		num=i;
 	int hundreds, tens, ones;
 	hundreds = num/100;
     num -= hundreds*100;
@@ -22,36 +25,36 @@ int main()
 	switch (hundreds)
 	{
 		case 1:
-			hundredsText = "One";
+			hundredsText = "One ";
 			break;
 		case 2:
-			hundredsText = "Two";
+			hundredsText = "Two ";
 			break;
 		case 3:
-			hundredsText = "Three";
+			hundredsText = "Three ";
 			break;
 		case 4:
-			hundredsText = "Four";
+			hundredsText = "Four ";
 			break;
 		case 5:
-			hundredsText = "Five";
+			hundredsText = "Five ";
 			break;
 		case 6:
-			hundredsText = "Six";
+			hundredsText = "Six ";
 			break;
 		case 7:
-			hundredsText = "Seven";
+			hundredsText = "Seven ";
 			break;
 		case 8:
-			hundredsText = "Eight";
+			hundredsText = "Eight ";
 			break;
 		case 9:
-			hundredsText = "Nine";
+			hundredsText = "Nine ";
 			break;
 		default:
 			hundredsText = "";
 	}
-    hundredsText = (hundreds != 0)? hundredsText + " Hundred": hundredsText + "";
+    hundredsText = (hundreds != 0)? hundredsText + "Hundred ": "";
 
 	switch (ones)
 	{
@@ -89,24 +92,31 @@ int main()
 	switch (tens)
 	{
 	    case 0:
-            cout << hundredsText
-                 << (hundreds>0)? " and " : "";
-            cout << onesText;
+            cout << hundredsText;
+			if (hundreds > 0 && ones>0) 
+				cout << " and ";
+			cout << onesText;
             break;
         case 1:
             switch (ones)
             {
                 case 0:
-                    cout << hundredsText << " Ten";
+                    cout << hundredsText << "Ten";
                     break;
                 case 1:
-                    cout << hundredsText << " Eleven";
+                    cout << hundredsText << "Eleven";
                     break;
                 case 2:
-                    cout << hundredsText << " Twelve";
+                    cout << hundredsText << "Twelve";
                     break;
+				case 3:
+					cout << hundredsText << "Thirteen";
+					break;
+				case 5:
+					cout << hundredsText << "Fifteen";
+					break;
                 default:
-                    cout << hundredsText << " " << onesText << "teen";
+                    cout << hundredsText << onesText << "teen";
             }
             break;
         case 2:
@@ -134,7 +144,9 @@ int main()
             cout << hundredsText << " Ninety " << onesText;
 	}
     cout << endl;
-
-//	system("pause");
+	if (tens == 0)
+		system("pause");
+	} 
+	system("pause");
 	return 0;
 }
