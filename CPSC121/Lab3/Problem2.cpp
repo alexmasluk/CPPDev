@@ -1,3 +1,17 @@
+//=========================================================================
+// File: problem2.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/18/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 3, Problem No. 2
+// Description: 
+// 	Count number of upper and lowercase letters in a string.
+//
+//=========================================================================
+
 #include <iostream>
 #include <ctime>
 #include <iomanip>
@@ -5,6 +19,9 @@ using namespace std;
 
 const int LEFT_WIDTH = 35;
 
+//====== main =============================================================
+//
+//========================================================================= 
 
 int main()
 {
@@ -13,6 +30,7 @@ int main()
     time(&p);
     cout << "Today's time and date: " << ctime(&p) << endl << endl;
 
+	//get input and count cases
     int numUppers=0, numDigits=0, numVowels=0;
     char c;
     cout << "\tEnter a sentence: ";
@@ -30,6 +48,7 @@ int main()
             numVowels++;
     }
 
+	//output results
     cout << setfill('.');
     cout << left << setw(LEFT_WIDTH);
     cout << "\tNumber of uppercase letters";
@@ -44,8 +63,19 @@ int main()
     cout << left << setw(LEFT_WIDTH);
     cout << "\tNumber of vowels";
     cout << right << setw(1);
-    cout << numVowels << endl;
+    cout << numVowels << endl << endl;
 
-    //system("pause");
+    system("pause");
     return 0;
 }
+/*=============================================OUTPUT=================================================
+Today's time and date: Tue Sep 16 16:39:51 2014
+
+
+        Enter a sentence: Today Is Thr Sep 14, 2014
+        Number of uppercase letters.......4
+        Number of digits..................6
+        Number of vowels..................4
+
+Press any key to continue . . .
+=====================================================================================================*/
