@@ -31,9 +31,12 @@ int main()
     //seed random generator
     srand(time(0));
 
+    //display title and declare variables
     cout << "    Let's practice addition with random integer numbers < 100\n\n";
     int a,b,answer, numCorrect=0, numWrong=0;
     char cont;
+    
+    //output math problems until user declines to continue
     do
     {
         a=rand()%100; b=rand()%100;
@@ -53,6 +56,7 @@ int main()
         cin >> cont;
     } while (toupper(cont)=='Y');
 
+    //output number of correct and wrong answers
     cout << endl;
     cout << "    Number of CORRECT answers: " << numCorrect << endl;
     cout << "    Number of WRONG answers: " << numWrong << endl << endl;
