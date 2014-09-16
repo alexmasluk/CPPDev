@@ -3,9 +3,13 @@
 #include <ctime>
 using namespace std;
 
-const float EURO_RATE = .66;
-const float POUND_RATE = .79;
-const float YEN_RATE = 400;
+const float EURO_RATE = .77,
+            POUND_RATE = .61,
+            YEN_RATE = 107.35;
+
+const int YEN_ASCII=165,
+          POUND_ASCII=163,
+          EURO_ASCII=128;
 
 int main()
 {
@@ -18,34 +22,30 @@ int main()
     cout << "Please enter start, finish, and jump values for the exchange table: ";
     cin >> start >> finish >> jump;
 
-    cout << "    $      " << char(165)
-         << "      " << char(163)
-         << "      " << char(128) << endl;
 
-    for (int i=0; i<4; i++) cout << ' ';
-    cout << '$';
-    for (int i=0; i<6; i++) cout << ' ';
-    cout << char(165);
-    for (int i=0; i<6; i++) cout << ' ';
-    cout << char(163);
-    for (int i=0; i<6; i++) cout << ' ';
-    cout << char(128);
+    cout << setfill(' ') << internal
+         << setw(10) << "$  "
+         << setw(12) << char(YEN_ASCII)
+         << setw(10) << char(POUND_ASCII)
+         << setw(10) << char(EURO_ASCII) << endl;
+
+    for (int i=1; i<50; i++)
+        cout << char(151);
     cout << endl;
 
-    for (int i=1; i<30; i++)
-        cout << char(151);
-
-    cout << showpoint << fixed << setprecision(2);
+    cout << showpoint << fixed << setprecision(2) << right;
     for (int i = start; i<=finish; i+=jump)
     {
-        cout << "   " << i   << "   "
-             << i*YEN_RATE   << "   "
-             << i*POUND_RATE << "   "
-             << i*EURO_RATE << endl;
+        cout << setw(10) << float(i)
+             << setw(12) << i*YEN_RATE
+             << setw(10) << i*POUND_RATE
+             << setw(10) << i*EURO_RATE
+             << endl;
     }
 
     cout << endl;
-    return 0;
 
+    //system("pause");
+    return 0;
 }
 
