@@ -1,7 +1,26 @@
+//=========================================================================
+// File: problem3.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 09/18/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 3, Problem No. 3
+// Description: 
+// 	Display addition problems with random ints and grade user input
+//
+//=========================================================================
+
 #include <iostream>
 #include <ctime>
 #include <random>
 using namespace std;
+
+//====== main =============================================================
+//
+//========================================================================= 
+
 int main()
 {
     //timestamp
@@ -12,7 +31,7 @@ int main()
     //seed random generator
     srand(time(0));
 
-    cout << "    Let's practice addition with random integer numbers < 100!\n\n";
+    cout << "    Let's practice addition with random integer numbers < 100\n\n";
     int a,b,answer, numCorrect=0, numWrong=0;
     char cont;
     do
@@ -35,10 +54,31 @@ int main()
     } while (toupper(cont)=='Y');
 
     cout << endl;
-    cout << "Number of CORRECT answers: " << numCorrect << endl;
-    cout << "Number of WRONG answers: " << numWrong << endl;
+    cout << "    Number of CORRECT answers: " << numCorrect << endl;
+    cout << "    Number of WRONG answers: " << numWrong << endl << endl;
 
-    //system("pause");
+
+    system("pause");
     return 0;
-
 }
+/*=============================================OUTPUT=================================================
+Time and date: Tue Sep 16 16:43:46 2014
+
+
+    Let's practice addition with random integer numbers < 100
+
+        95 + 67 = ? 162
+          CORRECT
+          Continue(y/n)? y
+        57 + 23 = ? 49
+          WRONG
+          Continue(y/n)? y
+        39 + 43 = ? 69
+          WRONG
+          Continue(y/n)? n
+
+    Number of CORRECT answers: 1
+    Number of WRONG answers: 2
+
+Press any key to continue . . .
+=====================================================================================================*/
