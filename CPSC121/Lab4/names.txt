@@ -1,0 +1,8 @@
+Jefferson 17
+Bill      24
+Mary      19
+Jack      22
+Matthew   19
+Claudia   23
+Judy      18
+
