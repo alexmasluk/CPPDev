@@ -24,35 +24,45 @@ const int S=0,M=1,L=2,XL=3,
 
 int main()
 {
+	//timestamp
+    time_t p;
+    time(&p);
+    cout << "Time and date: " << ctime(&p) << endl;
+
     int shirts[3][4] = { { 22,30,10, 7 },
                          { 21,23, 7,11 },
                          {  8,11,10,12 } };
     int total=0, totalBlue=0, totalLarge=0;
 
+	//compute totals
     cout << setw(3) << left;
-for (int row=0; row<3; row++)
+	for (int row=0; row<3; row++)
     {
-        for (int i=0; i<21; i++) cout << "-";
-        cout << endl << "| ";
         for (int col=0; col<4; col++)
         {
-            if (shirts[row][col]<10) cout << " ";
-            cout << shirts[row][col] << " | ";
             total+=shirts[row][col];
             if (row==BLUE) totalBlue+=shirts[row][col];
             if (col==L) totalLarge+=shirts[row][col];
         }
-        cout << endl;
     }
 
+	//display results
     cout << "Total number of T-Shirts: " << total << endl;
     cout << "Total number of BLUE shirts: " << totalBlue << endl;
-    cout << "Total number of LARGE shirts: " << totalLarge << endl;
+    cout << "Total number of LARGE shirts: " << totalLarge << endl
+							   << endl;
 
-//    system("pause");
+    system("pause");
 	return 0;
 
 }
 
 /*============================= OUTPUT ====================================
+Time and date: Tue Sep 23 16:04:16 2014
+
+Total number of T-Shirts: 172
+Total number of BLUE shirts: 62
+Total number of LARGE shirts: 27
+
+Press any key to continue . . .
 =========================================================================*/
