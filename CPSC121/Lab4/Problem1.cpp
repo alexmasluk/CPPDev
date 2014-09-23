@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <algorithm>
+#include <ctime>
 using namespace std;
 
 //====== main =============================================================
@@ -22,6 +23,11 @@ using namespace std;
 
 int main()
 {
+    //timestamp
+    time_t p;
+    time(&p);
+    cout << "Time and date: " << ctime(&p) << endl;
+
     int a[6]={3,9,7,8,1,4};
     int max=a[0], min=a[0];
     int total=0;
@@ -48,12 +54,19 @@ int main()
     sort(a, a+6);
     cout << "This is the sorted form of array a: ";
     for (int i=0; i<6; i++) cout << a[i] << " ";
-    cout << endl;
+    cout << endl << endl;
 
-//    system("pause");
-	return 0;
+    system("pause");
+    return 0;
 
 }
 
-/*============================= OUTPUT ====================================
-=========================================================================*/
+/*========================== OUTPUT =============================
+Time and date: Tue Sep 23 15:37:38 2014
+
+This is the original array a: 3 9 7 8 1 4
+Maximum=9 Minimum=1 Average=5.33333
+This is the sorted form of array a: 1 3 4 7 8 9
+
+Press any key to continue . . .
+===============================================================*/
