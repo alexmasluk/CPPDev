@@ -15,6 +15,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <ctime>
 using namespace std;
 
 //====== main =============================================================
@@ -23,15 +24,21 @@ using namespace std;
 
 int main()
 {
+	//timestamp
+    time_t p;
+    time(&p);
+    cout << "Time and date: " << ctime(&p) << endl;
+
     string Names[5]={"Ronald Reagan", "Bill Clinton",
                      "George Bush",   "Barack Obama",
                      "Jimmy Carter"};
     long int Salary[5]={25000,300000,185000,4500,1300};
     long int total=0;
 
+	//display table
     cout << setfill('.');
     cout << "   Name                  Salary\n";
-    for (int i=0; i<33; i++) cout << char(95);
+    for (int i=0; i<33; i++) cout << char(196);
     cout << endl;
 
     for (int i=0; i<5; i++)
@@ -44,14 +51,27 @@ int main()
         total += Salary[i];
     }
 
+	//compute and display average salary
     cout << fixed << showpoint << setprecision(2);
     cout << "  Average salaries is " << float(total)/5
-         << endl;
+         << endl << endl;
 
-//    system("pause");
+    system("pause");
 	return 0;
 
 }
 
-/*============================= OUTPUT ====================================
-=========================================================================*/
+/*============================= OUTPUT =========================
+Time and date: Tue Sep 23 15:47:34 2014
+
+   Name                  Salary
+─────────────────────────────────
+Ronald Reagan...............25000
+Bill Clinton...............300000
+George Bush................185000
+Barack Obama.................4500
+Jimmy Carter.................1300
+  Average salaries is 103160.00
+
+Press any key to continue . . .
+===============================================================*/
