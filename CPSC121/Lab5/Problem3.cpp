@@ -2,7 +2,7 @@
 // File: problem3.cpp
 //=========================================================================
 // Programmer: Alex Masluk
-// Date: 09/25/2014
+// Date: 10/7/2014
 // Class: CPSC 121 ("Programming Concepts")
 // Time: Tues 3:30PM
 // Instructor: Dr. Ray Ahmadnia
@@ -92,7 +92,7 @@ void display(int total, float average)
 
 void display(int x, int y, int z, int max, int min)
 {
-    cout << "  the max and in values of " << x << ", "
+    cout << "  the max and min values of " << x << ", "
          << y << ", and " << z << " are " << max
          << " and " << min << endl;
     return;
@@ -113,6 +113,6 @@ Time and date: Wed Oct  1 14:21:13 2014
 Enter three integer numbers: 5 3 8
   Total: 16
   Average: 5.33333
-  the max and in values of 5, 3, and 8 are 8 and 3
+  the max and min values of 5, 3, and 8 are 8 and 3
 ===============================================================*/
 
