@@ -2,13 +2,13 @@
 // File: problem1.cpp
 //=========================================================================
 // Programmer: Alex Masluk
-// Date: 09/25/2014
+// Date: 10/7/2014
 // Class: CPSC 121 ("Programming Concepts")
 // Time: Tues 3:30PM
 // Instructor: Dr. Ray Ahmadnia
 // Project: Project No. 5, Problem No. 1
 // Description:
-//
+//          Parses a string for vowels, uppers, lowers, words
 //
 //=========================================================================
 
