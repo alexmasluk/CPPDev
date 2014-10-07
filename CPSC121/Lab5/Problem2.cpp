@@ -1,3 +1,17 @@
+//=========================================================================
+// File: problem2.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 10/7/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 5, Problem No. 2
+// Description:
+//          Perform operations on arrays, including display and makeUpper
+//
+//=========================================================================
+
 #include <iostream>
 #include <string>
 #include <algorithm>
@@ -6,8 +20,11 @@ using namespace std;
 template<class T> void displayArray(T arr[], int length);
 string makeUpper(string s);
 
-int main()
+//====== main =============================================================
+//
+//=========================================================================
 
+int main()
 {
     int age[] = {22,33,11,16,10};
     string name[] = {"Bill", "Adam", "Mary", "David"};
