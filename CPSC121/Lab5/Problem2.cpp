@@ -3,8 +3,7 @@
 #include <algorithm>
 #include <cctype>
 using namespace std;
-void displayArray(int arr[], int length);
-void displayArray(string arr[], int length);
+template<class T> void displayArray(T arr[], int length);
 string makeUpper(string s);
 
 int main()
@@ -37,15 +36,8 @@ int main()
     cout<< endl;
 
 }
-
-void displayArray(int arr[], int length)
-{
-    for(int i=0; i<length; i++)
-        cout << arr[i] << " ";
-    return;
-}
-
-void displayArray(string arr[], int length)
+template<class T>
+void displayArray(T arr[], int length)
 {
     for(int i=0; i<length; i++)
         cout << arr[i] << " ";
