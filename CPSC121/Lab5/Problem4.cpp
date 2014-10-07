@@ -1,19 +1,20 @@
 //=========================================================================
-// File: problem1.cpp
+// File: problem4.cpp
 //=========================================================================
 // Programmer: Alex Masluk
-// Date: 09/25/2014
+// Date: 10/7/2014
 // Class: CPSC 121 ("Programming Concepts")
 // Time: Tues 3:30PM
 // Instructor: Dr. Ray Ahmadnia
-// Project: Project No. 5, Problem No. 1
+// Project: Project No. 5, Problem No. 4
 // Description:
-//
+//				Determine last name of user
 //
 //=========================================================================
 
 #include <iostream>
 #include <string>
+#include <ctime>
 using namespace std;
 
 
@@ -65,4 +66,15 @@ void timestamp()
 
 
 /*========================== OUTPUT =============================
+Time and date: Tue Oct 07 15:40:55 2014
+
+  Please enter your full name: Bill Clinton
+    Bill Clinton, your last name is Clinton
+    CONTINUE(y/n)? y
+  Please enter your full name: George W Bush
+    George W Bush, your last name is Bush
+    CONTINUE(y/n)? y
+  Please enter your full name: Barack Hussein Obama
+    Barack Hussein Obama, your last name is Obama
+    CONTINUE(y/n)? n
 ===============================================================*/
