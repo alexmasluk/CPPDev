@@ -2,18 +2,18 @@
 // File:
 //=========================================================================
 // Programmer: Alex Masluk
-// Date:
+// Date: 10/16/2014
 // Class: CPSC 121 ("Programming Concepts")
 // Time: Tues 3:30PM
 // Instructor: Dr. Ray Ahmadnia
-// Project: Project No. , Problem No.
+// Project: Project No. 6, Problem No.2
 // Description:
-//
+//          Read data from text file, using delimeter to terminate cstrings
 //
 //=========================================================================
 
 #include <iostream>
-#include <string>
+#include <cstring>
 #include <iomanip>
 #include <fstream>
 #include <ctime>
@@ -49,7 +49,7 @@ int main()
     ageGpaAverage(p, ageAve, gpaAve);
     display(ageAve,gpaAve);
 
-    return 0;
+	return 0;
 }
 
 void copyRecords(string fname, RECORD p[])
@@ -58,33 +58,23 @@ void copyRecords(string fname, RECORD p[])
     f.open(fname, ios::in);
     for (int i = 0; i < N; i++)
     {
-        string line;
-        getline(f, line);
-        p[i].name;
-        f >> p[i].age;
+        f.getline(p[i].name, 20, '/');
+		f >> p[i].age;
         f >> p[i].gpa;
+		f.ignore();
     }
     f.close();
 }
 
 void display(RECORD p[])
 {
+	cout << " Name               Age GPA\n";
+	cout << "---------------------------\n";
     for (int i = 0; i < N; i++)
     {
-        cout << setw(20) << left;
-        int nameIndex = 0;
-        char c = p[i].name[nameIndex];
-        while (c!='/')
-        {
-            cout << toupper(c);
-            c = p[i].name[++nameIndex];
-        }
-
-        cout << setw(2);
-        cout << p[i].age;
-        cout << right << setw(3);
-        cout << p[i].gpa;
-        cout << endl << left;
+        cout << setw(20) << left <<strupr(p[i].name);
+        cout << setw(3) << p[i].age << " " << p[i].gpa;
+		cout << endl;
     }
 }
 
@@ -103,8 +93,8 @@ void ageGpaAverage(RECORD p[], float& ageAve, float& gpaAve)
 
 void display(float a, float b)
 {
-    cout << "Average age = " << a << endl;
-    cout << "Average gpa = " << b << endl;
+    cout << "Their AGE average is " << a  
+		 << " and their GPA average is " << b << endl;
 }
 
 void timestamp()
@@ -115,4 +105,14 @@ void timestamp()
 }
 
 /*===============================OUTPUT====================================
+Time and date: Tue Oct 14 15:55:41 2014
+
+ Name               Age GPA
+---------------------------
+MARTIN SMITH        22  2.2
+AUSTIN CLINTON      18  3.1
+JOHNSON             19  2.9
+MAGGIE JONES        23  2.3
+TYLER W BROWN       16  3.4
+Their AGE average is 19.6 and their GPA average is 2.78
 =========================================================================*/
