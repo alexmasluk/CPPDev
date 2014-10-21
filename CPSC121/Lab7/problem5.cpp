@@ -28,31 +28,31 @@ int main()
 {
     timestamp();
 
-    time_t start, end;
+    int begin, end;
 
     int n=43;
 
-    time(&start);
+    begin=clock();
     cout << "fib("<<n<<")=";
     int x;
-    for (int i=0; i<1000; i++) x=fibr(n);
+    x=fibr(n);
     cout << x << endl;
-    time(&end);
-    cout << "Recursive operation took " << difftime(end,start) << " seconds\n";
+    end=clock();
+    cout << "Recursive operation took " << float(end-begin)/CLK_TCK << " seconds\n";
 
-    time(&start);
+    begin=clock();
     cout << "fib("<<n<<")=";
-    for (int i=0; i<1000; i++) x=fibi(n);
+    x=fibi(n);
     cout << x << endl;
-    time(&end);
-    cout << "Iterative operation took " << difftime(end,start) << " seconds\n";
+    end=clock();
+    cout << "Iterative operation took " << float(end-begin)/CLK_TCK << " seconds\n";
+	system("pause");
     return 0;
 }
 
 long fibr(long n)
 {
-    if (n==1) return 1;
-    if (n==2) return 1;
+    if (n==1||n==2) return 1;
     else return fibr(n-1)+fibr(n-2);
 }
 
@@ -81,11 +81,12 @@ void timestamp()
 }
 
 /*===============================OUTPUT====================================
-Time and date: Sun Oct 19 15:24:47 2014
+Time and date: Tue Oct 21 15:35:03 2014
 
 fib(43)=433494437
-Recursive operation took 3 seconds
+Recursive operation took 20.119 seconds
 fib(43)=433494437
 Iterative operation took 0 seconds
+Press any key to continue . . .
 =======================================================================*/
 
