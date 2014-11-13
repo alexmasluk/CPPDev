@@ -1,3 +1,17 @@
+//=========================================================================
+// File: problem2.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 11/13/14
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 10, Problem No. 2
+// Description:
+//      Manage an array of ages with class TWO
+//
+//=========================================================================
+
 #include <iostream>
 #include <ctime>
 using namespace std;
@@ -14,9 +28,15 @@ class TWO
              void DisplayMaxMinAge(int maxAge, int minAge);
              ~TWO();
 };
+void timestamp();
+
+//====== main =============================================================
+//
+//=========================================================================
 
 int main()
 {
+    timestamp();
     TWO t;
     t.ReadData();
     int ave=FindAverage(t);
@@ -70,3 +90,18 @@ void TWO::DisplayMaxMinAge(int maxAge, int minAge)
     cout << "  Minimum age is " << minAge << endl;
 }
 
+void timestamp()
+{
+    time_t p;
+    time(&p);
+    cout << "Time and date: " << ctime(&p) << endl;
+}
+
+/*===============================OUTPUT==================================
+Time and date: Wed Nov 12 21:54:29 2014
+
+Enter 5 ages: 22 27 19 17 25
+  Ages above average: 27 25
+  Maximum age is 27
+  Minimum age is 17
+=======================================================================*/
