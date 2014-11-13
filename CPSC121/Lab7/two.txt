@@ -1,0 +1,7 @@
+5
+22 2.2 Bill Clinton
+33 3.3 Phil Jackson
+44 4.0 Mary A Johnson
+25 2.5 Adam Smith
+65 3.2 George W Bush
+

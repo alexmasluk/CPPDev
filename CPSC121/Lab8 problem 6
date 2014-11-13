@@ -1,0 +1,102 @@
+//=========================================================================
+// File: problem6.cpp
+//=========================================================================
+// Programmer: Alex Masluk
+// Date: 11/6/2014
+// Class: CPSC 121 ("Programming Concepts")
+// Time: Tues 3:30PM
+// Instructor: Dr. Ray Ahmadnia
+// Project: Project No. 9, Problem No. 6
+// Description: 
+//   Store an array of structs in a class
+//
+//=========================================================================
+
+#include <iostream>
+#include <ctime>
+#include <iomanip>
+using namespace std;
+
+class SIX
+{
+private:
+	struct PERSON
+	{
+		string name; int age;
+	};
+	PERSON p[4];
+
+public:
+	void ReadData()
+	{
+		for (int i=0; i<4; i++)
+		{
+			cout << "Enter a name and age:";
+			cin >> p[i].name >> p[i].age;
+		}
+	}
+	
+	void Display()
+	{
+		int w1=8, w2=16;
+		cout << "  This is the list of people\n";
+		cout << setw(w1) << "    NAME" << setw(w2) <<"AGE\n";
+		cout << "------------------------------------\n";
+		for (int i=0; i<4; i++)
+		{
+			cout << setw(w1) << "   " << p[i].name
+				 << setw(w2) << p[i].age << endl;
+		}
+	}
+	
+	int AgeAve()
+	{
+		int total=0;
+		for (int i=0; i<4; ++i)
+			total+= p[i].age;
+		return total/4;
+	}
+
+	void DisplayAboveAve()
+	{
+		cout << "The following people's age is above average:\n";
+		for (int i=0; i<4; i++)
+			if (p[i].age>AgeAve())
+				cout << p[i].name << "   ";
+		cout << endl;
+	}
+
+};
+
+void timestamp();
+
+//====== main =============================================================
+//
+//=========================================================================
+
+int main()
+{ 
+	timestamp();
+	SIX s;
+	s.ReadData();
+	s.Display();
+	s.DisplayAboveAve();
+
+	system("pause");
+	return 0;
+}
+
+void timestamp()
+{
+	time_t p;
+    time(&p);
+    cout << "Time and date: " << ctime(&p) << endl;
+}
+/*=============================================OUTPUT=================================================
+Time and date: Tue Nov 04 15:45:41 2014
+
+Enter 7 integers: 22 77 33 99 11 10 23
+All data: 22 77 33 99 11 10 23
+Maximum = 99 Minimum = 10 Total = 275
+Press any key to continue . . .
+=====================================================================================================*/
